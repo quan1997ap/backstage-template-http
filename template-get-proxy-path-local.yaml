@@ -18,6 +18,14 @@ spec:
           ui:autofocus: true
           ui:options:
             rows: 5
+      name:
+          title: Name
+          type: string
+          description: Name
+          ui:autofocus: true
+          ui:options:
+            rows: 5
+            
 
   steps:
     - id: backstage_request
@@ -41,7 +49,7 @@ spec:
       body:
         name: 'test'
         bar: 'foo'   
-         
+
   output:
     getResponse: '{{ steps.backstage_request.output.body }}'
     getCode: '{{ steps.backstage_request.output.code }}'
