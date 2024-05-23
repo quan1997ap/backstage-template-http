@@ -9,22 +9,33 @@ spec:
   type: service
 
   parameters:
-    - title: Fill in some params for request
+    - title: Fill in some steps
+      required:
+        - name
       properties:
-        httpGetPath:
-          title: Get Path
-          type: string
-          description: The path you want to get on your backstage instance
-          ui:autofocus: true
-          ui:options:
-            rows: 5
         name:
           title: Name
           type: string
-          description: Name
-          ui:autofocus: true
+          description: Unique name of the component
+        owner:
+          title: Owner
+          type: string
+          description: Owner of the component
+          ui:field: OwnerPicker
           ui:options:
-            rows: 5
+            catalogFilter:
+              kind: Group
+    - title: Choose a location
+      required:
+        - repoUrl
+      properties:
+        repoUrl:
+          title: Repository Location
+          type: string
+          ui:field: RepoUrlPicker
+          ui:options:
+            allowedHosts:
+              - github.com
 
   steps:
     - id: backstage_request
