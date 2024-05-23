@@ -18,13 +18,13 @@ spec:
           ui:autofocus: true
           ui:options:
             rows: 5
-      name:
-          title: Name
-          type: string
-          description: Name
-          ui:autofocus: true
-          ui:options:
-            rows: 5
+        name:
+            title: Name
+            type: string
+            description: Name
+            ui:autofocus: true
+            ui:options:
+              rows: 5
             
 
   steps:
