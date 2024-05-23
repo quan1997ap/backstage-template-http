@@ -38,7 +38,7 @@ spec:
           test: 'hello'
           foo: 'bar'
 
-    - id: backstage_request
+    - id: backstage_request_with_input
       name: backstage request
       action: http:backstage:request
       input:
@@ -46,9 +46,9 @@ spec:
         path: '/proxy/local-mock/users'
         headers:
           content-type: 'application/json'
-      body:
-        name: 'test'
-        bar: 'foo'   
+        body:
+          name: 'test'
+          bar: 'foo'   
 
   output:
     getResponse: '{{ steps.backstage_request.output.body }}'
