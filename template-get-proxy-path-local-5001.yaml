@@ -54,7 +54,8 @@ spec:
           content-type: 'application/json'
         body:
           name: 'test'
-          bar: 'foo'   
+          bar: 'foo' 
+          reqBody:  ${{parameters}}
 
   output:
     getResponse: '{{ steps.backstage_request.output.body }}'
