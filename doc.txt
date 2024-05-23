@@ -1,0 +1,6 @@
+Backstage request
+https://roadie.io/backstage/plugins/scaffolder-http-requests/
+
+Link file https://github.com/quan1997ap/backstage-template-http/blob/main/template-get-proxy-path-local.yaml
+
+https://github.com/backstage/software-templates/blob/main/scaffolder-templates/create-react-app/template.yaml

@@ -11,13 +11,13 @@ spec:
   parameters:
     - title: Fill in some params for request
       properties:
-        httpGetPath:
-          title: Get Path
+        repoUrl:
+          title: RepoUrl
           type: string
-          description: The path you want to get on your backstage instance
+          description: Path lưu trữ file backstage
           ui:autofocus: true
           ui:options:
-            rows: 5
+            rows: 15
         name:
           title: Name
           type: string
@@ -34,16 +34,6 @@ spec:
             rows: 5
 
   steps:
-    - id: backstage_request
-      name: backstage request
-      action: http:backstage:request
-      input:
-        method: 'GET'
-        path: '/proxy/local-mock/users'
-        headers:
-          test: 'hello'
-          foo: 'bar'
-
     - id: backstage_request_with_input
       name: backstage request
       action: http:backstage:request
@@ -57,12 +47,21 @@ spec:
           bar: 'foo' 
           reqBody:  ${{parameters}}
 
+    - id: publish
+      name: Publish
+      action: publish:github
+      input:
+        allowedHosts:
+          - github.com
+        description: This is ${{ parameters.component_id }}
+        repoUrl: ${{ parameters.repoUrl }}
+
     - id: register
       name: Register
       action: catalog:register
       input:
-        repoContentsUrl: ${{ parameters.httpGetPath }}
-        catalogInfoPath: "/catalog-info.yaml"
+        repoContentsUrl: ${{ steps['publish'].output.repoContentsUrl }}
+        catalogInfoPath: 'some/path/catalog-info.yaml'
 
   output:
     getResponse: '{{ steps.backstage_request.output.body }}'
