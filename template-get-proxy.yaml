@@ -3,13 +3,13 @@ kind: Template
 metadata:
   name: HTTP-testing-for-get-mock-proxy
   title: Http testing for get New API proxy
-  description: Testing get functionality with get
+  description: Testing get functionality with get proxy
 spec:
   owner: roadie
   type: service
 
   parameters:
-    - title: Fill in some params
+    - title: Fill in some params for request
       properties:
         httpGetPath:
           title: Get Path
