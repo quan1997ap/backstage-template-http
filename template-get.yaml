@@ -25,7 +25,7 @@ spec:
       action: http:backstage:request
       input:
         method: 'GET'
-        path: 'mockfly'
+        path: '/mockfly/mocks/0fd8dca4-6022-4889-865c-1af500873140/aggregated-issues'
         headers:
           test: 'hello'
           foo: 'bar'
