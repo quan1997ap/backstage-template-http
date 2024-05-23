@@ -1,8 +1,8 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: HTTP-testing-for-get-mock 1
-  title: Http testing for get New API 1
+  name: HTTP-testing-for-get-mock-proxy
+  title: Http testing for get New API proxy
   description: Testing get functionality with get
 spec:
   owner: roadie
@@ -25,7 +25,7 @@ spec:
       action: http:backstage:request
       input:
         method: 'GET'
-        path: '/proxy/api/catalog/entities?filter=kind%3Dcomponent'
+        path: 'mockfly'
         headers:
           test: 'hello'
           foo: 'bar'
