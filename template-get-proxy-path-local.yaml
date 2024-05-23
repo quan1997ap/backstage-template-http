@@ -30,6 +30,18 @@ spec:
           test: 'hello'
           foo: 'bar'
 
+    - id: backstage_request
+      name: backstage request
+      action: http:backstage:request
+      input:
+        method: 'POST'
+        path: '/proxy/local-mock/users'
+        headers:
+          content-type: 'application/json'
+      body:
+        name: 'test'
+        bar: 'foo'   
+         
   output:
     getResponse: '{{ steps.backstage_request.output.body }}'
     getCode: '{{ steps.backstage_request.output.code }}'
