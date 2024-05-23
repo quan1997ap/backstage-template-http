@@ -1,8 +1,8 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: HTTP-testing
-  title: Http testing for post/get New API
+  name: HTTP-testing-for-get-mock
+  title: Http testing for get New API
   description: Testing get functionality with get
 spec:
   owner: roadie
