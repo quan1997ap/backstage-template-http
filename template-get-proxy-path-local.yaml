@@ -43,7 +43,7 @@ spec:
       action: http:backstage:request
       input:
         method: 'POST'
-        path: '/proxy/local-mock/users'
+        path: '/proxy/local-mock/update-user'
         headers:
           content-type: 'application/json'
         body:
