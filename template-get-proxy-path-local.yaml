@@ -1,9 +1,9 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: HTTP-testing-for-get-mock-proxy
-  title: Http testing for get New API proxy
-  description: Testing get functionality with get proxy
+  name: HTTP-testing-for-get-mock-proxy-local-5000
+  title: Http testing for get New API proxy local 5000
+  description: Testing get functionality with get proxy local 5000
 spec:
   owner: roadie
   type: service
@@ -25,7 +25,7 @@ spec:
       action: http:backstage:request
       input:
         method: 'GET'
-        path: '/proxy/mockfly/mocks/0fd8dca4-6022-4889-865c-1af500873140/aggregated-issues'
+        path: '/proxy/local-mock/users'
         headers:
           test: 'hello'
           foo: 'bar'
