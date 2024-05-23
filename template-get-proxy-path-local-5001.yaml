@@ -57,6 +57,13 @@ spec:
           bar: 'foo' 
           reqBody:  ${{parameters}}
 
+    - id: register
+      name: Register
+      action: catalog:register
+      input:
+        repoContentsUrl: ${{ parameters.httpGetPath }}
+        catalogInfoPath: "/catalog-info.yaml"
+
   output:
     getResponse: '{{ steps.backstage_request.output.body }}'
     getCode: '{{ steps.backstage_request.output.code }}'

@@ -1,9 +1,9 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: HTTP-testing-for-get-mock-proxy-local-5000
-  title: Http testing for get New API proxy local 5000
-  description: Testing get functionality with get proxy local 5000
+  name: HTTP-testing-for-get-mock-proxy-local-5001
+  title: Http testing for get New API proxy local 5001
+  description: Testing get functionality with get proxy local 5001
 spec:
   owner: roadie
   type: service
@@ -15,6 +15,20 @@ spec:
           title: Get Path
           type: string
           description: The path you want to get on your backstage instance
+          ui:autofocus: true
+          ui:options:
+            rows: 5
+        name:
+          title: Name
+          type: string
+          description: Name
+          ui:autofocus: true
+          ui:options:
+            rows: 5
+        age:
+          title: Age
+          type: string
+          description: Age
           ui:autofocus: true
           ui:options:
             rows: 5
@@ -30,18 +44,19 @@ spec:
           test: 'hello'
           foo: 'bar'
 
-    - id: backstage_request
+    - id: backstage_request_with_input
       name: backstage request
       action: http:backstage:request
       input:
         method: 'POST'
-        path: '/proxy/local-mock/users'
+        path: '/proxy/local-mock/update-user'
         headers:
           content-type: 'application/json'
-      body:
-        name: 'test'
-        bar: 'foo'   
-         
+        body:
+          name: 'test'
+          bar: 'foo' 
+          reqBody:  ${{parameters}}
+
   output:
     getResponse: '{{ steps.backstage_request.output.body }}'
     getCode: '{{ steps.backstage_request.output.code }}'
