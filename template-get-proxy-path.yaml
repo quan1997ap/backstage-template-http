@@ -1,9 +1,9 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: HTTP-testing-for-get-mock-proxy
-  title: Http testing for get New API proxy
-  description: Testing get functionality with get proxy
+  name: HTTP-testing-for-get-mock-proxy 1
+  title: Http testing for get New API proxy 1
+  description: Testing get functionality with get proxy 1
 spec:
   owner: roadie
   type: service
