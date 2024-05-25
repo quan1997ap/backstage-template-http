@@ -3,7 +3,7 @@ kind: Component
 metadata:
   tempBuilderId: 12343432
   name: artist-web11
-  description: Description of artist-web
+  description: Description of artist-web11
   annotations:
     pagerduty.com/integration-key: <sample-service-integration-key>
   tags:
