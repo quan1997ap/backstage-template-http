@@ -2,8 +2,8 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   tempBuilderId: 12343432
-  name: artist-web1
-  description: Description of artist-web
+  name: artist-web11
+  description: Description of artist-web11
   annotations:
     pagerduty.com/integration-key: <sample-service-integration-key>
   tags:
