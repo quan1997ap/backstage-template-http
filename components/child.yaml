@@ -6,6 +6,5 @@ metadata:
 spec:
   type: service
   lifecycle: production
-  owner: group:engineering
   parent: 
     - component:majestic-monolith
