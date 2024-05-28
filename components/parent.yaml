@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: majestic-monolith
+  description: It's bigger and badder than ever
+spec:
+  type: service
+  lifecycle: production
+  owner: group:engineering
+  children:
+    - component:majestic-monolith-o11y

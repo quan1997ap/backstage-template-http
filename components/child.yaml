@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: majestic-monolith-o11y
+  description: Prometheus metrics collection and export
+spec:
+  type: service
+  lifecycle: production
+  owner: group:devops
