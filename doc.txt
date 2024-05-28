@@ -8,3 +8,6 @@ https://github.com/backstage/software-templates/blob/main/scaffolder-templates/c
 
 Cấu hình cha con
 https://backstage.io/docs/features/software-catalog/well-known-relations/#partof-and-haspart
+
+System model
+https://backstage.io/docs/features/software-catalog/system-model/

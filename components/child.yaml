@@ -7,4 +7,4 @@ spec:
   type: website
   lifecycle: production
   owner: artist-relations-team
-  subcomponentOf: majestic-monolith
+  dependsOn: majestic-monolith
