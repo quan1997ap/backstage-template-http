@@ -6,4 +6,5 @@ metadata:
 spec:
   type: service
   lifecycle: production
+  owner: group:engineering
   owner: group:devops
