@@ -8,3 +8,5 @@ spec:
   lifecycle: production
   owner: group:engineering
   owner: group:devops
+  parent: 
+    - component:majestic-monolith
