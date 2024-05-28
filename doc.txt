@@ -4,3 +4,7 @@ https://roadie.io/backstage/plugins/scaffolder-http-requests/
 Link file https://github.com/quan1997ap/backstage-template-http/blob/main/template-get-proxy-path-local.yaml
 
 https://github.com/backstage/software-templates/blob/main/scaffolder-templates/create-react-app/template.yaml
+
+
+Cấu hình cha con
+https://backstage.io/docs/features/software-catalog/well-known-relations/#partof-and-haspart

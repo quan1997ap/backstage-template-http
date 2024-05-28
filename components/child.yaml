@@ -4,5 +4,7 @@ metadata:
   name: majestic-monolith-o11y
   description: Prometheus metrics collection and export
 spec:
-  type: service
+  type: website
   lifecycle: production
+  owner: artist-relations-team
+  system: artist-engagement-portal
