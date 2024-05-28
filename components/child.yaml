@@ -7,3 +7,4 @@ spec:
   type: website
   lifecycle: production
   owner: artist-relations-team
+  subcomponentOf: artist-relations-team
