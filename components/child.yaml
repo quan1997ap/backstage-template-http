@@ -6,5 +6,5 @@ metadata:
 spec:
   type: service
   lifecycle: production
-  parent: 
+  subcomponentOf: 
     - component:majestic-monolith
