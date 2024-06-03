@@ -7,8 +7,6 @@ metadata:
 spec:
   owner: roadie
   type: service
-  url: http://localhost:3000/create?filters%5Bkind%5D=template&filters%5Buser%5D=all
-
   parameters:
     - title: Fill in some params for request
       properties:
