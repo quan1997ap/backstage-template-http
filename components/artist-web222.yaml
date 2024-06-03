@@ -18,16 +18,3 @@ spec:
   lifecycle: production
   owner: team-a
   system: project-x
-
-
-{
-    "name": "ServiceA",
-    "description": "This is optional",
-    "bitbucket": "Link bitbucket",
-    "argocd": "Link argocd",
-    "action_id": 1,
-    "input": {
-        "field_x": "value"
-    }
-}
--> yaml -> tra ve

@@ -1,0 +1,54 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: tempate-proxy-call-api
+  title: tempate-proxy-call-api
+  description: tempate-proxy-call-api
+spec:
+  owner: roadie
+  type: service
+  url: http://localhost:3000/create?filters%5Bkind%5D=template&filters%5Buser%5D=all
+
+  parameters:
+    - title: Fill in some params for request
+      properties:
+        repoUrl:
+          title: RepoUrl
+          type: string
+          description: Path lưu trữ file backstage
+          ui:autofocus: true
+          ui:options:
+            rows: 15
+        name:
+          title: Name
+          type: string
+          description: Name
+          ui:autofocus: true
+          ui:options:
+            rows: 5
+        age:
+          title: Age
+          type: string
+          description: Age
+          ui:autofocus: true
+          ui:options:
+            rows: 5
+
+  steps:
+    - id: backstage_request_with_input
+      name: backstage request
+      action: http:backstage:request
+      input:
+        method: 'POST'
+        path: '/proxy/local-mock/update-user'
+        headers:
+          content-type: 'application/json'
+        body:
+          name: 'test'
+          bar: 'foo' 
+          url: ${{spec.url}}
+          reqBody:  ${{parameters}}
+  output:
+    getResponse: '{{ steps.backstage_request.output.body }}'
+    getCode: '{{ steps.backstage_request.output.code }}'
+    getHeaders: '{{ steps.backstage_request.output.headers }}'
