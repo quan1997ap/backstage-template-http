@@ -48,7 +48,3 @@ spec:
           bar: 'foo' 
           url: ${{spec.url}}
           reqBody:  ${{parameters}}
-  output:
-    getResponse: '{{ steps.backstage_request.output.body }}'
-    getCode: '{{ steps.backstage_request.output.code }}'
-    getHeaders: '{{ steps.backstage_request.output.headers }}'

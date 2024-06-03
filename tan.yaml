@@ -1,0 +1,43 @@
+kind: Component
+meteadata:
+  name: form name
+spec:
+  parameters:
+    - required:
+        - name
+        - desc
+      properties:
+        name:
+          title: Service Name
+          type: number
+          description: This is optional
+          ui:order: 1
+          maxLength: 20
+          default: service A
+        desc:
+          title: Service desc
+          type: number
+          description: This is optional
+          ui:order: 2
+          maxLength: 20
+          default: service A
+      type: object
+      title: form name
+  type: Service
+  title: form name
+  steps:
+    - id: backstage_request_with_input
+      name: backstage request
+      action: http:backstage:request
+      input:
+        method: POST
+        path: /proxy/local-mock/update-user
+        headers:
+          content- type: application/json
+        body:
+          name: test
+          bar: foo
+          url:
+http://localhost:3000
+          reqBody: ${{ parameters }}
+apiVersion: scaffolder.backstage.io/v1beta3
