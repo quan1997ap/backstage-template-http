@@ -44,7 +44,11 @@ spec:
         headers:
           content-type: 'application/json'
         body:
-          name: 'test'
-          bar: 'foo' 
-          url: ${{spec.url}}
           reqBody:  ${{parameters}}
+
+    - id: register
+      name: Register
+      action: catalog:register
+      input:
+        repoContentsUrl: ${{ parameters.repoUrl }}
+        catalogInfoPath: "/catalog-info.yaml"
